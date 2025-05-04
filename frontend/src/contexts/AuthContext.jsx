@@ -22,18 +22,13 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  const login = (token) => {
-    localStorage.setItem('token', token); 
-    fetchProfile(token).then(setUser);
-  };
-
   const logout = () => {
     localStorage.removeItem('token'); 
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, loading }}>
+    <AuthContext.Provider value={{ user, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

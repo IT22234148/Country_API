@@ -4,20 +4,17 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Landing from './pages/Landing';
-import Login from './pages/Login'; // Fix the import for Login
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login"    element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/"    element={<Landing />} />
-          <Route path="/home"         element={<Protected><Home /></Protected>} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Protected><Home /></Protected>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
   );
 }
-//
