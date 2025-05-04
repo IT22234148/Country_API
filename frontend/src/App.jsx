@@ -2,10 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Home from './pages/Home';
-import Login from './pages/Login';
 import Register from './pages/Register';
 import Landing from './pages/Landing';
-
+import Login from './pages/Login'; // Fix the import for Login
 
 export default function App() {
   return (
