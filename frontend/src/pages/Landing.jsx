@@ -12,10 +12,10 @@ export default function Landing() {
 
       {/* Welcome Banner (Above Card) */}
       <div className="relative z-10 mb-8 text-center animate-fade-in-down">
-  <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 shadow-lg hover:text-indigo-700 transition duration-300 ease-in-out transform hover:scale-110 uppercase tracking-wider leading-tight">
-    Welcome to the World Explorer
-  </p>
-</div>
+        <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 shadow-lg hover:text-indigo-700 transition duration-300 ease-in-out transform hover:scale-110 uppercase tracking-wider leading-tight">
+          Welcome to the World Explorer
+        </p>
+      </div>
 
       <br />
 
@@ -31,16 +31,11 @@ export default function Landing() {
           Discover and explore comprehensive information about countries around the world—flags, capitals, regions, languages, and more.
         </p>
 
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link to="/register">
-            <button className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl shadow-md transition duration-300">
-              Create an Account
-            </button>
-          </Link>
-          <Link to="/login">
+        {/* View Countries Button */}
+        <div className="flex justify-center mb-12">
+          <Link to="/home">
             <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition duration-300">
-              Login
+              View Countries
             </button>
           </Link>
         </div>
