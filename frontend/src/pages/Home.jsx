@@ -9,6 +9,7 @@ export default function Home() {
   const [filtered, setFiltered] = useState([]);
   const [selected, setSelected] = useState(null);
   const [error, setError] = useState('');
+  const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
   // Initial load of all countries
   useEffect(() => {
@@ -73,7 +74,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-100 via-white to-purple-100 px-4 py-6 md:px-12 lg:px-20">
+    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-sky-100 via-white to-purple-100'} min-h-screen px-4 py-6 md:px-12 lg:px-20`}>
       <div className="sticky top-0 bg-gradient-to-r from-blue-100 via-white to-purple-100 z-10 shadow-lg py-4">
         <header className="mb-4 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-800 drop-shadow-md">
@@ -89,6 +90,12 @@ export default function Home() {
           <div className="w-full md:w-1/4">
             <RegionFilter onSelect={handleFilter} />
           </div>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="px-4 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 transition"
+          >
+            Toggle Dark Mode
+          </button>
         </div>
       </div>
 
