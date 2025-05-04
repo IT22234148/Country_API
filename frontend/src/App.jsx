@@ -6,15 +6,6 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Landing from './pages/Landing';
 
-function Protected({ children }) {
-  const { user, loading } = useAuth();
-
-  if (loading) {
-    return <div>Loading...</div>; 
-  }
-
-  return user ? children : <Navigate to="/login" />;
-}
 
 export default function App() {
   return (
